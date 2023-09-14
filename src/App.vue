@@ -4,10 +4,17 @@
       <h1>My Freinds</h1>
     </header>
     <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
-      <friend-contactxx></friend-contactxx>
-      <friend-contactxx></friend-contactxx>
+      <friend-contact
+        name="Ardyn Sulaeman"
+        phone-number="085793647568"
+        email-address="ardyn.sulaeman@gmail.com"
+      >
+      </friend-contact>
+      <friend-contact-two
+        name="Ai Inka Agustina"
+        phone-number="085127838488"
+        email-address="inka@gmail.com"
+      ></friend-contact-two>
     </ul>
   </section>
 </template>
