@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h2>My Freinds</h2>
+    <header>
+      <h1>My Freinds</h1>
+    </header>
     <ul>
       <friend-contact></friend-contact>
       <friend-contact></friend-contact>
@@ -38,3 +40,7 @@ export default {
   },
 };
 </script>
+
+<style>
+@import url("./styles/styles.css");
+</style>
