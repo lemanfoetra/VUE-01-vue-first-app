@@ -13,7 +13,23 @@
 
 <script>
 export default {
-  props: ["name", "phoneNumber", "emailAddress"],
+  // props: ["name", "phoneNumber", "emailAddress"],
+  props: {
+    name: {
+      type: String,
+      required: true,
+      default : '-',
+    },
+    phoneNumber : {
+      type : String,
+      required : true,
+    },
+    emailAddress : {
+      type : String,
+      required : true,
+      default : '-',
+    },
+  },
   data() {
     return {
       detailAreVisible: false,
