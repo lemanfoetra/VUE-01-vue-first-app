@@ -33,12 +33,6 @@ export default {
   data() {
     return {
       detailAreVisible: false,
-      friend: {
-        id: 1,
-        name: "Manuel Lorenz",
-        phone: "0857937468",
-        email: "manuesl@mail.com",
-      },
     };
   },
   methods: {
