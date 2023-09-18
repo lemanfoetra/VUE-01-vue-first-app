@@ -7,7 +7,7 @@
     <ul>
       <friend-contact v-for="friend in friends" :key="friend.id" :id="friend.id" :name="friend.name"
         :phone-number="friend.phone" :email-address="friend.email" :is-Favorite="friend.isFavorite"
-        @favorite-event="favoriteEvent">
+        @favorite-event="favoriteEvent" @delete-contact="deleteContact">
       </friend-contact>
     </ul>
   </section>
@@ -56,6 +56,11 @@ export default {
         isFavorite: false,
       }
       this.friends.push(newFriend)
+    },
+    deleteContact(id) {
+      let friend = this.friends.find((friend) => friend.id == id);
+      let index = this.friends.indexOf(friend);
+      this.friends.splice(index, 1)
     }
   }
 };

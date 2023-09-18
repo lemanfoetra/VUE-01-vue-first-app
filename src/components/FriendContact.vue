@@ -5,6 +5,9 @@
     <button @click="toggleDetails">
       {{ detailAreVisible ? "Hide" : "Show" }} Details
     </button>
+    <button @click="$emit('delete-contact', id)">
+      Delete
+    </button>
     <ul v-if="detailAreVisible">
       <li><strong>Phone : </strong> {{ phoneNumber }}</li>
       <li><strong>Email : </strong>{{ emailAddress }}</li>
@@ -54,7 +57,7 @@ export default {
     },
     toggleIsFavorite() {
       this.$emit('favorite-event', this.id)
-    }
+    },
   },
 };
 </script>
