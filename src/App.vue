@@ -4,13 +4,15 @@
       <h1>My Freinds</h1>
     </header>
     <ul>
-      <friend-contact
-        v-for="friend in friends"
-        :key="friend.id"
+      <friend-contact v-for="friend in friends" 
+        :key="friend.id" 
+        :id="friend.id" 
         :name="friend.name"
-        :phone-number="friend.phone"
-        :email-address="friend.email"
-      >
+        :phone-number="friend.phone" 
+        :email-address="friend.email" 
+        :is-Favorite="friend.isFavorite"
+        @favorite-event="favoriteEvent"
+        >
       </friend-contact>
     </ul>
   </section>
@@ -26,22 +28,31 @@ export default {
           name: "Manuel Lorenz",
           phone: "0857937468",
           email: "manuesl@mail.com",
+          isFavorite: false,
         },
         {
           id: 2,
           name: "Manuel Lorenz 2",
           phone: "0857937468",
           email: "manuesl@mail.com",
+          isFavorite: true,
         },
         {
           id: 3,
           name: "Manuel Lorenz 3",
           phone: "0857937468",
           email: "manuesl@mail.com",
+          isFavorite: false,
         },
       ],
     };
   },
+  methods: {
+    favoriteEvent(friendId) {
+      let friend = this.friends.find((friend) => friend.id == friendId);
+      friend.isFavorite = !friend.isFavorite
+    },
+  }
 };
 </script>
 
