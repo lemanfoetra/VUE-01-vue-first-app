@@ -38,8 +38,11 @@ export default {
       type: Boolean,
       required: false,
       default: false,
-    }
+    },
   },
+  emits: [
+    'favorite-event'
+  ],
   data() {
     return {
       detailAreVisible: false,
